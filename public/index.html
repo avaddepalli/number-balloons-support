@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Number Balloons support for help, feedback, or feature requests.">
+  <meta name="theme-color" content="#fff8e7">
+  <title>Number Balloons Support</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <div class="balloon balloon-one" aria-hidden="true"></div>
+  <div class="balloon balloon-two" aria-hidden="true"></div>
+  <div class="balloon balloon-three" aria-hidden="true"></div>
+
+  <main class="page-shell">
+    <header class="hero">
+      <a class="brand" href="/" aria-label="Number Balloons support home">
+        <span class="brand-mark" aria-hidden="true">12</span>
+        <span>Number Balloons</span>
+      </a>
+      <p class="eyebrow">Support</p>
+      <h1>How can we help?</h1>
+      <p class="intro">Use this form for app issues, feedback, or feature suggestions. A parent or guardian should submit support requests for a child.</p>
+    </header>
+
+    <section class="support-card" aria-labelledby="support-form-title">
+      <div class="card-heading">
+        <h2 id="support-form-title">Send a support request</h2>
+        <p>Fields marked <span aria-hidden="true">*</span><span class="sr-only">required</span> are required.</p>
+      </div>
+
+      <noscript><p class="notice">JavaScript is disabled. You can still submit the form, but confirmation will appear on a separate page.</p></noscript>
+
+      <form id="support-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="post">
+        <input type="hidden" name="_subject" value="Number Balloons support request">
+        <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="category">What can we help with? <span aria-hidden="true">*</span></label>
+            <select id="category" name="category" required>
+              <option value="" selected disabled>Select a category</option>
+              <option value="Gameplay issue">Gameplay issue</option>
+              <option value="App crash or technical issue">App crash or technical issue</option>
+              <option value="Billing or purchase question">Billing or purchase question</option>
+              <option value="Feedback or feature request">Feedback or feature request</option>
+              <option value="Privacy question">Privacy question</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="email">Parent or guardian email <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="you@example.com" required>
+          </div>
+
+          <div class="field">
+            <label for="app-version">App version <span class="optional">(optional)</span></label>
+            <input id="app-version" name="app_version" type="text" maxlength="40" placeholder="Example: 1.0.0">
+          </div>
+
+          <div class="field">
+            <label for="device">Device and iOS version <span class="optional">(optional)</span></label>
+            <input id="device" name="device_and_ios" type="text" maxlength="100" placeholder="Example: iPhone 15, iOS 18">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Describe the issue or suggestion <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="7" minlength="10" maxlength="3000" placeholder="Tell us what happened, what you expected, and any steps that may help us reproduce the issue." required></textarea>
+          <p class="field-help">Please do not include a child’s full name, photo, school, location, or other sensitive information.</p>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" name="adult_confirmation" value="confirmed" required>
+          <span>I confirm that I am an adult submitting this request and agree that the information may be used to respond and troubleshoot.</span>
+        </label>
+
+        <div class="form-actions">
+          <button id="submit-button" type="submit">Send request</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+
+    <section class="help-notes" aria-label="Support information">
+      <article><h2>Helpful details</h2><p>Include the game mode, difficulty level, the question shown, and what happened after you selected an answer.</p></article>
+      <article><h2>Response time</h2><p>Support requests are reviewed as soon as practical. Please submit the form once and check your spam folder for replies.</p></article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> Number Balloons.</p>
+    <nav aria-label="Footer"><a href="/privacy.html">Support privacy notice</a></nav>
+  </footer>
+</body>
+</html>
